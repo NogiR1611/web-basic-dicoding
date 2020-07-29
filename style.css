@@ -9,7 +9,6 @@
 
 header{
     border:1px solid #40d3e3;
-    top:0;
     text-align:center;
     display:inline;
 }
@@ -18,7 +17,7 @@ header .title-and-author{
     width:100%;
     background-color: #40d3e3;
     height:auto;
-    margin:0;
+    margin-top:-20px;
     padding:10px 20px;
 }
 
@@ -26,6 +25,7 @@ header nav{
     text-align:left;
     width:100%;
     height:auto;
+    position:-webkit-sticky;
     position:sticky;
     background-color: #3284db;
     padding:10px 10px;
@@ -52,15 +52,14 @@ header nav ul li a:hover{
 }
 
 main{
-    display:grid;
+    display:flex;
     height:auto;
-    grid-template-columns: 70% auto;
-    flex-direction: row;
-    padding:30px 20px;
+    padding:10px 20px;
 }
 
 #content{
-    margin:30px 0px;
+    flex-basis:70%;
+    margin:10px 0px;
     height:auto;
     padding:20px 20px;
     background-color:white;
@@ -69,9 +68,15 @@ main{
     box-shadow:1px 2px 2px 2px;
 }
 
+article{
+    padding-bottom:20px;
+    padding-top:40px;
+}
+
 article p{
     display:inline-block;
-    padding:0px 0px;
+    text-indent:30px;
+    padding:5px 0px;
     height:auto;
 }
 
@@ -85,17 +90,23 @@ article ul li{
 }
 
 aside{
-    margin:30px 20px;
-    height:40%;
+    flex-basis:30%;
+    height:300px;
+    margin:10px 20px;
+    padding:20px 20px;
     background-color:white;
     border:1px solid #e9f0eb;
     border-radius:5%;
     box-shadow:1px 2px 2px 2px;
 }
 
+aside img{
+    border-radius:100%;
+    width:150px;
+    height:150px;
+}
+
 footer{
-    display:flex;
-    justify-content:center;
     margin:0;
     width:100%;
     height:auto;
@@ -104,7 +115,46 @@ footer{
     color:white;
 }
 
+.contact-and-sosmed{
+    display:flex;
+    margin:30px 0px;
+}
+
+footer .contact-and-sosmed ul{
+    display: inline-block;
+    margin-top:10px;
+}
+
+footer .contact-and-sosmed .contact li a{
+    text-decoration: none;
+    color:white;
+}
+
+
+footer .contact-and-sosmed ul li{
+    text-decoration: none;
+    list-style-type: none;
+    margin-left:20px;
+}
+
+footer .sosmed{
+    flex-grow: 1;
+    text-align:center;
+}
+
+footer .contact{
+    flex-grow: 1;
+    text-align:left;
+}
+footer .contact-and-sosmed .sosmed li{
+    display:inline-block;
+}
+
 footer img{
-    width:50px;
-    height:50px;
+    width:30px;
+    height:30px;
+}
+
+footer h4{
+    text-align:center;
 }
