@@ -70,7 +70,7 @@ main{
 
 article{
     padding-bottom:20px;
-    padding-top:40px;
+    padding-top:30px;
 }
 
 article p{
@@ -91,7 +91,7 @@ article ul li{
 
 aside{
     flex-basis:30%;
-    height:300px;
+    height:600px;
     margin:10px 20px;
     padding:20px 20px;
     background-color:white;
@@ -100,10 +100,20 @@ aside{
     box-shadow:1px 2px 2px 2px;
 }
 
-aside img{
+aside h3{
+    text-align:center;
+}
+
+aside .photo-profile{
     border-radius:100%;
     width:150px;
     height:150px;
+}
+
+aside table,tr,td{
+    border:1px solid black;
+    padding:2px 5px;
+    border-collapse: collapse;
 }
 
 footer{
@@ -142,6 +152,14 @@ footer .sosmed{
     text-align:center;
 }
 
+footer .contact h3{
+    margin-left:20px;
+}
+
+footer .sosmed h3{
+    margin-left:20px;
+}
+
 footer .contact{
     flex-grow: 1;
     text-align:left;
@@ -154,6 +172,7 @@ footer img{
     width:30px;
     height:30px;
 }
+
 
 footer h4{
     text-align:center;
