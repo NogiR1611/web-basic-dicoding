@@ -177,3 +177,188 @@ footer img{
 footer h4{
     text-align:center;
 }
+
+@media screen and (max-width:425px){
+    *{
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+        height:auto;
+        margin:0;
+        padding:0;
+        font-family: 'Quicksand', sans-serif;
+    }
+    
+    header{
+        border:1px solid #40d3e3;
+        text-align:center;
+        display:inline;
+    }
+    
+    header .title-and-author{
+        width:100%;
+        background-color: #40d3e3;
+        height:auto;
+        margin-top:-20px;
+        padding:10px 20px;
+    }
+    
+    header nav{
+        text-align:left;
+        width:100%;
+        height:auto;
+        position:-webkit-sticky;
+        position:sticky;
+        background-color: #3284db;
+        padding:10px 10px;
+        z-index:2;
+        margin:0;
+        top:0;
+    }
+    
+    header nav ul li{
+        list-style:none;
+        display:inline-block;
+        margin-left:20px;
+    }
+    
+    header nav ul li a{
+        text-decoration:none;
+        color:black;
+        padding:10px 10px;
+        transition:all .3s;
+    }
+    
+    header nav ul li a:hover{
+        background-color:#0860cc;
+    }
+    
+    main{
+        display:flex;
+        height:auto;
+        padding:10px 20px;
+        flex-direction:row-reverse;
+    }
+    
+    #content{
+        flex-grow:2;
+        flex-basis:70%;
+        margin:10px 0px;
+        height:auto;
+        padding:20px 20px;
+        background-color:white;
+        border:1px solid #e9f0eb;
+        border-radius:5%;
+        box-shadow:1px 2px 2px 2px;
+    }
+    
+    article{
+        padding-bottom:20px;
+        padding-top:30px;
+    }
+    
+    article p{
+        display:inline-block;
+        text-indent:30px;
+        padding:5px 0px;
+        height:auto;
+    }
+    
+    article h2{
+        display:inline-block;
+        height:auto;
+    }
+    
+    article ul li{
+        height:auto;
+    }
+    
+    aside{
+        flex-grow:1;
+        flex-basis:30%;
+        height:600px;
+        margin:10px 20px;
+        padding:20px 20px;
+        background-color:white;
+        border:1px solid #e9f0eb;
+        border-radius:5%;
+        box-shadow:1px 2px 2px 2px;
+    }
+    
+    aside h3{
+        text-align:center;
+    }
+    
+    aside .photo-profile{
+        border-radius:100%;
+        width:150px;
+        height:150px;
+    }
+    
+    aside table,tr,td{
+        border:1px solid black;
+        padding:2px 5px;
+        border-collapse: collapse;
+    }
+    
+    footer{
+        margin:0;
+        width:100%;
+        height:auto;
+        padding:20px 20px;
+        background-color:#445161;
+        color:white;
+    }
+    
+    .contact-and-sosmed{
+        display:flex;
+        margin:30px 0px;
+    }
+    
+    footer .contact-and-sosmed ul{
+        display: inline-block;
+        margin-top:10px;
+    }
+    
+    footer .contact-and-sosmed .contact li a{
+        text-decoration: none;
+        color:white;
+    }
+    
+    
+    footer .contact-and-sosmed ul li{
+        text-decoration: none;
+        list-style-type: none;
+        margin-left:20px;
+    }
+    
+    footer .sosmed{
+        flex-grow: 1;
+        text-align:center;
+    }
+    
+    footer .contact h3{
+        margin-left:20px;
+    }
+    
+    footer .sosmed h3{
+        margin-left:20px;
+    }
+    
+    footer .contact{
+        flex-grow: 1;
+        text-align:left;
+    }
+    footer .contact-and-sosmed .sosmed li{
+        display:inline-block;
+    }
+    
+    footer img{
+        width:30px;
+        height:30px;
+    }
+    
+    
+    footer h4{
+        text-align:center;
+    }
+}
