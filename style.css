@@ -214,7 +214,7 @@ footer h4{
         position:sticky;
         background-color: #3284db;
         padding:10px 10px;
-        z-index:2;
+        padding-right:350px;
         margin:0;
         top:0;
     }
@@ -224,7 +224,7 @@ footer h4{
         display:inline-block;
     }
 
-    header nav a:hover ul{
+    header nav:hover .dropdown{
         display:block;
     }
     
@@ -238,23 +238,36 @@ footer h4{
         display:none;
         position:absolute;
         z-index:1;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        list-style:none;
+        padding:10px 15px;
         overflow:hidden;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        margin-right:300px;
+        background-color:white;
     }
 
     header nav ul li{
         float:left;
+        display:block;
+        margin:0;
     }
     
     header nav ul li a{
         text-decoration:none;
         color:black;
-        padding:10px 10px;
         transition:all .3s;
     }
     
     header nav ul li a:hover{
-        background-color:#0860cc;
+        background-color:#c9ccd1;
+    }
+
+    header nav ul li a:visited{
+        background-color:white;
+    }
+
+    header nav ul li a:active{
+        background-color:#687d9e;
     }
     
     main{
@@ -272,7 +285,7 @@ footer h4{
         padding:20px 20px;
         background-color:white;
         border:1px solid #e9f0eb;
-        border-radius:5%;
+        border-radius:3%;
         box-shadow:1px 2px 2px 2px;
     }
     
@@ -336,7 +349,8 @@ footer h4{
     
     .contact-and-sosmed{
         display:flex;
-        margin:30px 0px;
+        flex-direction: column;
+        margin:10px 0px;
     }
     
     footer .contact-and-sosmed ul{
@@ -357,8 +371,9 @@ footer h4{
     }
     
     footer .sosmed{
-        flex-grow: 1;
-        text-align:center;
+        flex-grow: 2;
+        text-align:left;
+        margin:20px 0px;
     }
     
     footer .contact h3{
@@ -385,5 +400,6 @@ footer h4{
     
     footer h4{
         text-align:center;
+        font-size:12px;
     }
 }
