@@ -8,14 +8,14 @@
 }
 
 header{
-    border:1px solid #40d3e3;
+    border:1px solid #b7ebed;
     text-align:center;
     display:inline;
 }
 
 header .title-and-author{
     width:100%;
-    background-color: #40d3e3;
+    background-color: #b7ebed;
     height:auto;
     margin-top:-20px;
     padding:10px 20px;
@@ -25,9 +25,8 @@ header nav{
     text-align:left;
     width:100%;
     height:auto;
-    position:-webkit-sticky;
     position:sticky;
-    background-color: #3284db;
+    background-color: #edf7f7;
     padding:10px 10px;
     z-index:2;
     margin:0;
@@ -54,7 +53,7 @@ header nav ul li a{
 }
 
 header nav ul li a:hover{
-    background-color:#0860cc;
+    background-color:#c9ccd1;
 }
 
 main{
@@ -95,6 +94,30 @@ article ul li{
     height:auto;
 }
 
+.container{
+    width:60%;
+    margin:10px 10px;
+}
+
+.slider-wrapper{
+    width:80%;
+    height:200px;
+    position:relative;
+}
+
+.slide{
+    float:left;
+    position:absolute;
+    width:100%;
+    height:100%;
+    opacity:0;
+    transition:opacity 3s linear;
+}
+
+.slider-wrapper>.slide:first-child{
+    opacity:1;
+}
+
 aside{
     flex-basis:30%;
     height:600px;
@@ -120,7 +143,7 @@ aside table,tr,td{
     border:1px solid black;
     padding:2px 5px;
     border-collapse: collapse;
-}
+} 
 
 footer{
     margin:0;
@@ -195,14 +218,14 @@ footer h4{
     }
     
     header{
-        border:1px solid #40d3e3;
+        border:1px solid #b7ebed;
         text-align:center;
         display:inline;
     }
     
     header .title-and-author{
         width:100%;
-        background-color: #40d3e3;
+        background-color: #b7ebed;
         height:auto;
         margin-top:-20px;
         padding:10px 20px;
@@ -213,7 +236,7 @@ footer h4{
         width:100%;
         height:auto;
         position:sticky;
-        background-color: #3284db;
+        background-color: #edf7f7;
         padding:10px 10px;
         padding-right:350px;
         margin:0;
@@ -333,7 +356,7 @@ footer h4{
         width:150px;
         height:150px;
     }
-    
+
     aside table,tr,td{
         border:1px solid black;
         padding:2px 5px;
@@ -403,5 +426,414 @@ footer h4{
     footer h4{
         text-align:center;
         font-size:12px;
+    }
+}
+
+@media screen and (max-width:375px){
+    *{
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+        height:auto;
+        margin:0;
+        padding:0;
+        font-family: 'Quicksand', sans-serif;
+    }
+    
+    header{
+        border:1px solid #b7ebed;
+        text-align:center;
+        display:inline;
+    }
+    
+    header .title-and-author{
+        width:100%;
+        background-color:#b7ebed;
+        height:auto;
+        margin-top:-20px;
+        padding:10px 20px;
+        font-size:12px;
+    }
+    
+    header nav{
+        width:100%;
+        height:auto;
+        position:sticky;
+        background-color: #edf7f7;
+        padding:10px 10px;
+        margin:0;
+    }
+
+    header nav a{
+        text-decoration: none;
+        display:inline-block;
+    }
+
+    header nav:hover .dropdown{
+        display:block;
+    }
+    
+    header nav a img{
+        width:30px;
+        height:30px;
+        display:block;
+    }
+
+    header nav ul{
+        display:none;
+        position:absolute;
+        z-index:1;
+        list-style:none;
+        padding:10px 15px;
+        overflow:hidden;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        margin-right:300px;
+        background-color:white;
+    }
+
+    header nav ul li{
+        float:left;
+        display:block;
+        margin:0;
+    }
+    
+    header nav ul li a{
+        text-decoration:none;
+        color:black;
+        transition:all .3s;
+    }
+    
+    header nav ul li a:hover{
+        background-color:#c9ccd1;
+    }
+
+    header nav ul li a:visited{
+        background-color:white;
+    }
+
+    header nav ul li a:active{
+        background-color:#687d9e;
+    }
+    
+    main{
+        display:flex;
+        height:auto;
+        padding:10px 20px;
+        flex-direction:column-reverse;
+    }
+    
+    #content{
+        flex-grow:2;
+        flex-basis:70%;
+        margin:10px 0px;
+        height:auto;
+        padding:20px 20px;
+        background-color:white;
+        border:1px solid #e9f0eb;
+        border-radius:3%;
+        box-shadow:1px 2px 2px 2px;
+    }
+    
+    article{
+        padding-bottom:20px;
+        padding-top:20px;
+    }
+    
+    article p{
+        display:inline-block;
+        text-indent:30px;
+        padding:5px 0px;
+        height:auto;
+    }
+    
+    article h2{
+        margin:10px 0px;
+        display:inline-block;
+        height:auto;
+    }
+    
+    article ul li{
+        height:auto;
+    }
+    
+    aside{
+        flex-grow:1;
+        flex-basis:30%;
+        height:600px;
+        margin:10px 20px;
+        padding:20px 20px;
+        background-color:white;
+        border:1px solid #e9f0eb;
+        border-radius:5%;
+        box-shadow:1px 2px 2px 2px;
+    }
+    
+    aside h3{
+        text-align:center;
+    }
+    
+    aside .photo-profile{
+        border-radius:100%;
+        width:150px;
+        height:150px;
+    }
+
+    aside table,tr,td{
+        border:1px solid black;
+        padding:2px 5px;
+        font-size:10px;
+        border-collapse: collapse;
+    }
+    
+    footer{
+        margin:0;
+        width:100%;
+        height:auto;
+        padding:20px 20px;
+        background-color:#445161;
+        color:white;
+    }
+    
+    .contact-and-sosmed{
+        display:flex;
+        flex-direction: column;
+        margin:10px 0px;
+    }
+    
+    footer .contact-and-sosmed ul{
+        display: inline-block;
+        margin-top:10px;
+    }
+    
+    footer .contact-and-sosmed .contact li a{
+        text-decoration: none;
+        color:white;
+    }
+    
+    
+    footer .contact-and-sosmed ul li{
+        text-decoration: none;
+        list-style-type: none;
+        margin-left:20px;
+    }
+    
+    footer .sosmed{
+        flex-grow: 2;
+        text-align:left;
+        margin:20px 0px;
+    }
+    
+    footer .contact h3{
+        margin-left:20px;
+    }
+    
+    footer .sosmed h3{
+        margin-left:20px;
+    }
+    
+    footer .contact{
+        flex-grow: 1;
+        text-align:left;
+    }
+    footer .contact-and-sosmed .sosmed li{
+        display:inline-block;
+    }
+    
+    footer img{
+        width:30px;
+        height:30px;
+    }
+    
+    
+    footer h4{
+        text-align:center;
+        font-size:12px;
+    }
+}
+
+@media screen and (max-width:768px){
+    *{
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+        height:auto;
+        margin:0;
+        padding:0;
+        font-family: 'Quicksand', sans-serif;
+    }
+    
+    header{
+        border:1px solid #b7ebed;
+        text-align:center;
+        display:inline;
+    }
+    
+    header .title-and-author{
+        width:100%;
+        background-color: #b7ebed;
+        height:auto;
+        margin-top:-20px;
+        padding:10px 20px;
+    }
+    
+    header nav{
+        text-align:left;
+        width:100%;
+        height:auto;
+        position:sticky;
+        background-color: #edf7f7;
+        padding:10px 10px;
+        z-index:2;
+        margin:0;
+        top:0;
+    }
+    
+    header nav a img{
+        width:50px;
+        height:50px;
+        display:none;
+    }
+    
+    header nav ul li{
+        list-style:none;
+        display:inline-block;
+        margin-left:10px;
+    }
+    
+    header nav ul li a{
+        text-decoration:none;
+        color:black;
+        padding:10px 5px;
+        transition:all .3s;
+    }
+    
+    header nav ul li a:hover{
+        background-color:#c9ccd1;
+    }
+    
+    main{
+        display:flex;
+        height:auto;
+        padding:10px 20px;
+    }
+    
+    #content{
+        flex-basis:70%;
+        margin:10px 0px;
+        height:auto;
+        padding:20px 20px;
+        background-color:white;
+        border:1px solid #e9f0eb;
+        border-radius:5%;
+        box-shadow:1px 2px 2px 2px;
+    }
+    
+    article{
+        padding-bottom:20px;
+        padding-top:30px;
+    }
+    
+    article p{
+        display:inline-block;
+        text-indent:30px;
+        padding:5px 0px;
+        height:auto;
+    }
+    
+    article h2{
+        display:inline-block;
+        height:auto;
+    }
+    
+    article ul li{
+        height:auto;
+    }
+    
+    aside{
+        flex-basis:30%;
+        height:100%;
+        margin:10px 20px;
+        padding:20px 20px;
+        background-color:white;
+        border:1px solid #e9f0eb;
+        border-radius:5%;
+        box-shadow:1px 2px 2px 2px;
+    }
+    
+    aside h3{
+        text-align:center;
+    }
+    
+    aside .photo-profile{
+        border-radius:100%;
+        width:150px;
+        height:150px;
+    }
+    
+    aside table,tr,td{
+        border:1px solid black;
+        padding:2px 5px;
+        border-collapse: collapse;
+        font-size:12px;
+    }
+    
+    footer{
+        margin:0;
+        width:100%;
+        height:auto;
+        padding:20px 20px;
+        background-color:#445161;
+        color:white;
+    }
+    
+    .contact-and-sosmed{
+        display:flex;
+        margin:30px 0px;
+    }
+    
+    footer .contact-and-sosmed ul{
+        display: inline-block;
+        margin-top:10px;
+    }
+    
+    footer .contact-and-sosmed .contact li a{
+        text-decoration: none;
+        color:white;
+    }
+    
+    
+    footer .contact-and-sosmed ul li{
+        text-decoration: none;
+        list-style-type: none;
+        margin-left:20px;
+    }
+    
+    footer .sosmed{
+        flex-grow: 1;
+        text-align:center;
+    }
+    
+    footer .contact h3{
+        margin-left:20px;
+    }
+    
+    footer .sosmed h3{
+        margin-left:20px;
+    }
+    
+    footer .contact{
+        flex-grow: 1;
+        text-align:left;
+    }
+    footer .contact-and-sosmed .sosmed li{
+        display:inline-block;
+    }
+    
+    footer img{
+        width:30px;
+        height:30px;
+    }
+    
+    
+    footer h4{
+        text-align:center;
     }
 }
