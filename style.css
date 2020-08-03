@@ -22,6 +22,8 @@ header .title-and-author{
 }
 
 header nav{
+    display:flex;
+    flex-direction:row;
     text-align:left;
     width:100%;
     height:auto;
@@ -37,6 +39,11 @@ header nav a img{
     width:50px;
     height:50px;
     display:none;
+}
+
+header nav ul{
+    flex-basis:70%;
+    display:inline-block;
 }
 
 header nav ul li{
@@ -56,6 +63,14 @@ header nav ul li a:hover{
     background-color:#c9ccd1;
 }
 
+header nav #date{
+    flex-basis:30%;
+    display:inline-block;
+    margin-left:450px;
+    text-align:right;
+    padding:0px 20px;
+}
+
 main{
     display:flex;
     height:auto;
@@ -71,6 +86,10 @@ main{
     border:1px solid #e9f0eb;
     border-radius:5%;
     box-shadow:1px 2px 2px 2px;
+}
+
+#hello{
+    display:block;
 }
 
 article{
@@ -92,30 +111,6 @@ article h2{
 
 article ul li{
     height:auto;
-}
-
-.container{
-    width:60%;
-    margin:10px 10px;
-}
-
-.slider-wrapper{
-    width:80%;
-    height:200px;
-    position:relative;
-}
-
-.slide{
-    float:left;
-    position:absolute;
-    width:100%;
-    height:100%;
-    opacity:0;
-    transition:opacity 3s linear;
-}
-
-.slider-wrapper>.slide:first-child{
-    opacity:1;
 }
 
 aside{
@@ -233,12 +228,13 @@ footer h4{
     }
     
     header nav{
+        display:flex;
+        flex-direction:row;
         width:100%;
         height:auto;
         position:sticky;
         background-color: #edf7f7;
         padding:10px 10px;
-        padding-right:350px;
         margin:0;
         top:0;
     }
@@ -246,6 +242,7 @@ footer h4{
     header nav a{
         text-decoration: none;
         display:inline-block;
+        flex-basis:60%;
     }
 
     header nav:hover .dropdown{
@@ -255,7 +252,7 @@ footer h4{
     header nav a img{
         width:40px;
         height:40px;
-        display:block;
+        display:inline-block;
     }
 
     header nav ul{
@@ -270,6 +267,14 @@ footer h4{
         background-color:white;
     }
 
+    header nav #date{
+        flex-basis:40%;
+        display:inline-block;
+        margin:0 auto;
+        padding:10px 0px;
+        font-size:14px;
+    }
+
     header nav ul li{
         float:left;
         display:block;
@@ -278,6 +283,7 @@ footer h4{
     
     header nav ul li a{
         text-decoration:none;
+        display:inline-block;
         color:black;
         transition:all .3s;
     }
@@ -455,6 +461,8 @@ footer h4{
     }
     
     header nav{
+        display:flex;
+        flex-direction:row;
         width:100%;
         height:auto;
         position:sticky;
@@ -464,6 +472,7 @@ footer h4{
     }
 
     header nav a{
+        flex-basis:55%;
         text-decoration: none;
         display:inline-block;
     }
@@ -488,6 +497,13 @@ footer h4{
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         margin-right:300px;
         background-color:white;
+    }
+
+    header nav #date{
+        flex-basis:45%;
+        margin:0 auto;
+        display:inline-block;
+        font-size:12px;
     }
 
     header nav ul li{
@@ -650,7 +666,7 @@ footer h4{
     }
 }
 
-@media screen and (max-width:768px){
+@media screen and (min-width:768px){
     *{
         box-sizing: border-box;
         scroll-behavior: smooth;
@@ -675,7 +691,10 @@ footer h4{
     }
     
     header nav{
+        display:flex;
+        flex-direction:row;
         text-align:left;
+        font-size:14px;
         width:100%;
         height:auto;
         position:sticky;
@@ -690,6 +709,11 @@ footer h4{
         width:50px;
         height:50px;
         display:none;
+    }
+    
+    header nav ul{
+        display:inline-block;
+        flex-basis:70%;
     }
     
     header nav ul li{
@@ -709,14 +733,21 @@ footer h4{
         background-color:#c9ccd1;
     }
     
+    header nav #date{
+        margin:0 auto;
+        display:inline-block;
+        flex-basis:30%;
+    }
+    
     main{
         display:flex;
+        flex-direction:row;
         height:auto;
         padding:10px 20px;
     }
     
     #content{
-        flex-basis:70%;
+        flex-grow:2;
         margin:10px 0px;
         height:auto;
         padding:20px 20px;
@@ -724,6 +755,10 @@ footer h4{
         border:1px solid #e9f0eb;
         border-radius:5%;
         box-shadow:1px 2px 2px 2px;
+    }
+    
+    #hello{
+        display:block;
     }
     
     article{
@@ -748,8 +783,8 @@ footer h4{
     }
     
     aside{
-        flex-basis:30%;
-        height:100%;
+        flex-grow:1;
+        height:600px;
         margin:10px 20px;
         padding:20px 20px;
         background-color:white;
@@ -771,9 +806,9 @@ footer h4{
     aside table,tr,td{
         border:1px solid black;
         padding:2px 5px;
-        border-collapse: collapse;
         font-size:12px;
-    }
+        border-collapse: collapse;
+    } 
     
     footer{
         margin:0;

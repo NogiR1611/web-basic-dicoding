@@ -5,7 +5,6 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <title>Pengertian Startup dan Perkembangannya di indonesia</title>
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
-        <script src="slider.js" type="text/javascript"></script>
     </head>
     <body>
         <header>
@@ -21,11 +20,13 @@
                     <li><a href="#karakteristik">Karakteristik</a></li>
                     <li><a href="#perkembangan">Perkembangan di indonesia</a></li>
                 </ul>
+                <span id="date"></span>
             </nav>
         </header>
         <main>
             <div id="content">
                 <article id="pengertian">
+                    <p id="hello"></p>
                     <h2>Pengertian Startup</h2>
                     <p>
                         Sebenarnya, apa itu Startup? Mungkin masih banyak orang yang belum memahami istilah ini.
@@ -82,17 +83,6 @@
                         Berdasarkan beberapa riset, pada tahun 2013 saja diperkirakan pengguna internet di Indonesia telah mencapai 70 juta orang.
                         Dan berdasarkan data yang dirilis oleh APJII (Asosiasi Penyelenggara Jasa Internet Indonesia) pada tahun 2017, pengguna internet di Indonesia telah mencapai 143,26 juta jiwa.
                     </p>
-                    <div class="container">
-                        <div class="slider-wrapper">
-                            <img src="assets/img/slider/1.jpg" class="slide">
-                            <img src="assets/img/slider/2.jpg" class="slide">
-                            <img src="assets/img/slider/3.jpg" class="slide">
-                            <img src="assets/img/slider/4.jpg" class="slide">
-                            <img src="assets/img/slider/5.jpg" class="slide">
-                            <img src="assets/img/slider/6.jpg" class="slide">
-                            <img src="assets/img/slider/7.jpg" class="slide">
-                        </div>
-                    </div>
                     <p>
                         Dari data pertumbuhan pengguna internet tersebut bisa dibayangkan berapa jumlah user internet Indonesia beberapa tahun kedepan.
                         Selain itu, daya beli masyarakat yang meningkat seiring dengan naiknya pendapatan perkapita masyarakat negeri ini ikut mempengaruhi perkembangan industri digital.
@@ -200,11 +190,6 @@
             </div>
             <h4>Belajar Pengembangan Web Dasar &copy; <span id="year"></span>,Dicoding Academy</h4>
         </footer>
-        <script type="text/javascript">
-            let time = new Date();
-            let year = time.getFullYear();
-            
-            document.getElementById("year").innerHTML = year;
-        </script>
+        <script type="text/javascript" src="date-and-time.js"></script>
     </body>
 </html>
