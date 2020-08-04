@@ -8,16 +8,16 @@ let thisMonth = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agust
 let year = time.getFullYear();
             
 if (hours>=00 && hours<10){
-    document.getElementById("hello").innerHTML = "Selamat Pagi,Kali ini Saya akan menerangkan Konten sebuah Artikel mengenai Startup.Selamat membaca..";
+    document.getElementById("hello").innerHTML = "Selamat Pagi,Kali ini Saya akan menerangkan Konten sebuah Artikel mengenai Startup.Selamat membaca...";
 }
 else if(hours>=10 && hours<15){
-    document.getElementById("hello").innerHTML = "Selamat Siang,Kali ini Saya akan menerangkan Konten sebuah Artikel mengenai Startup.Selamat membaca..";
+    document.getElementById("hello").innerHTML = "Selamat Siang,Kali ini Saya akan menerangkan Konten sebuah Artikel mengenai Startup.Selamat membaca...";
 }
 else if(hours>=15 && hours<18){
-    document.getElementById("hello").innerHTML = "Selamat Sore,Kali ini Saya akan menerangkan Konten sebuah Artikel mengenai Startup.Selamat membaca..";
+    document.getElementById("hello").innerHTML = "Selamat Sore,Kali ini Saya akan menerangkan Konten sebuah Artikel mengenai Startup.Selamat membaca...";
 }
 else{
-    document.getElementById("hello").innerHTML = "Selamat Malam,Kali ini Saya akan menerangkan Konten sebuah Artikel mengenai Startup.Selamat membaca..";
+    document.getElementById("hello").innerHTML = "Selamat Malam,Kali ini Saya akan menerangkan Konten sebuah Artikel mengenai Startup.Selamat membaca...";
 }
 
 document.getElementById("year").innerHTML = year;
